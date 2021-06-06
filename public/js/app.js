@@ -8,7 +8,7 @@ const messageTwo = document.querySelector('#message-2')
 weather.addEventListener('submit', (event) => {
   event.preventDefault()
 
-  messageOne.textContent = 'Loading...'
+  messageOne.textContent = 'Loading ...'
   messageTwo.textContent = ''
 
   fetch(`http://localhost:3000/weather?address=${input.value}`).then((response) => {
