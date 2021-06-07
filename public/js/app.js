@@ -9,7 +9,7 @@ weather.addEventListener('submit', (event) => {
   event.preventDefault()
 
   messageOne.textContent = 'Loading ...'
-  messageTwo.textContent = ''
+  messageTwo.innerHTML = ''
 
   fetch(`/weather?address=${input.value}`).then((response) => {
     response.json().then((data) => {
@@ -18,7 +18,10 @@ weather.addEventListener('submit', (event) => {
         messageTwo.textContent = data.error
       } else {
         messageOne.textContent = 'The weather in ' + data.location + ' is: '
-        messageTwo.textContent = data.forecast.weather_description + ', temperature is ' + data.forecast.temperature + ' degree'
+        messageTwo.innerHTML = `${data.forecast.weather_description},<br>
+        temperature is ${data.forecast.temperature} degree,<br>
+        humidity is ${data.forecast.humidity}% and<br>
+        pressure - ${data.forecast.pressure} mm`
       }
     })
   })
