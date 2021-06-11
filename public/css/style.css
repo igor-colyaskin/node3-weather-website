@@ -13,6 +13,18 @@ body {
 .header {
   height: 120px;
 }
+a {
+  display: inline-block;
+  width: 90px;
+  height: 24px;
+  margin-right: 8px;
+  background-color: white;
+  text-align: center;
+  text-decoration: none;
+  color: #f6926b;
+  line-height: 24px;
+  text-shadow: none;
+}
 .header,
 .footer {
   width: 100%;
@@ -21,11 +33,6 @@ body {
   background-color: #fbc3ac;
   color: white;
   text-shadow: 0 0 4px #f6926b;
-}
-.header a {
-  color: #888;
-  margin-right: 16px;
-  text-decoration: none;
 }
 main {
   flex-grow: 1;
@@ -47,13 +54,19 @@ form {
   font-size: 64px;
 }
 .about + img {
-  width: 360px;
+  width: 240px;
+  margin: 8px;
 }
-#message-1 {
-  background-color: aqua;
+#message-1,
+#message-2,
+.about,
+.help {
+  margin: 8px;
+  color: #507f3d;
 }
 .root {
-  background-color: slateblue;
+  padding: 8px;
+  color: #507f3d;
 }
 .input,
 .button {
@@ -68,13 +81,15 @@ form {
   width: 360px;
   font-size: 16px;
   color: #507f3d;
+  box-shadow: 0 0 4px #c4ddbb;
 }
 .button {
   width: 120px;
   font-size: 18px;
   font-weight: 500;
   color: white;
-  background-color: #507f3d;
+  background-color: #f6926b;
+  text-shadow: 0 0 4px #f6faf5;
 }
 .input:focus-visible {
   outline: none;
